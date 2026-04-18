@@ -45,7 +45,7 @@
     }
 
     .container {
-      height: 70vh;
+      height: 50vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -89,19 +89,22 @@
         width: 200px;
         opacity: 0;
         transition: opacity 0.5s ease;
+        margin-top: 10px;
         }
   </style>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <body>
 
-  <div class="header">
+<div class="header">
   <h1>Happy Birthday</h1>
 
   <div class="gif">
     <div class="tenor-gif-embed" data-postid="15524768750287997468" data-share-method="host" data-aspect-ratio="0.961847" data-width="100%"><a href="https://tenor.com/view/fadding-cat-dance-gif-15524768750287997468">Fadding Cat GIF</a>from <a href="https://tenor.com/search/fadding-gifs">Fadding GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
   </div>
 </div>
+
+<p style="font-size: 12px;">tap anywhere for full experience &#128539;</p>
 
 <img id="gif-player" src="" class="gif-display">
 
@@ -141,10 +144,10 @@ window.onload = function () {
   music.volume = 0.5;
 
   music.play().catch(() => {
-    document.body.addEventListener("click", () => {
-      music.play();
-    }, { once: true });
-  });
+  document.body.addEventListener("click", () => {
+    music.play();
+  }, { once: true });
+});
 
   const gifPlayer = document.getElementById("gif-player");
 
